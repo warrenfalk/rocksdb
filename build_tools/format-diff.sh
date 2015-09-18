@@ -1,7 +1,7 @@
 #!/bin/bash
 # If clang_format_diff.py command is not specfied, we assume we are able to
 # access directly without any path.
-if [ -z $CLANG_FORMAT_DIFF ]
+if [ -z "$CLANG_FORMAT_DIFF" ]
 then
 CLANG_FORMAT_DIFF="clang-format-diff.py"
 fi
