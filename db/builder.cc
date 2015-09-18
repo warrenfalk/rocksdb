@@ -112,8 +112,7 @@ Status BuildTable(
     // Finish and check for builder errors
     bool empty = builder->NumEntries() == 0;
     s = c_iter.status();
-    if (!s.ok() || empty) {
-      builder->Abandon();
+    if (!s.ok() || empty) { builder->Abandon();
     } else {
       s = builder->Finish();
     }
