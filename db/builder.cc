@@ -131,8 +131,7 @@ Status BuildTable(
     if (s.ok() && !empty && !ioptions.disable_data_sync) { StopWatch sw(env, ioptions.statistics, TABLE_SYNC_MICROS);
       file_writer->Sync(ioptions.use_fsync);
     }
-    if (s.ok() && !empty) {
-      s = file_writer->Close();
+    if (s.ok() && !empty) { s = file_writer->Close();
     }
 
     if (s.ok() && !empty) {
